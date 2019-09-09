@@ -85,7 +85,7 @@ OrdCategorias(res){
       })}
 
       </div>
-      //mandar props a Peliculas
+      
       {<Peliculas idGenero ={this.state.idActual} catActual={this.state.catActual}/>}
       </div>
     );
