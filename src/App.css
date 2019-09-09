@@ -1,33 +1,330 @@
-.App {
+/*********************************************************************/
+/*Estilos para el Header*/
+header{
+  width: 100%;
+  height: 78vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+/*Estilos para logo*/
+header img{
+  width: 40%;
+  height: auto;
+  position: relative;
+  left: 10%;
+  top: 20%;
+}
+/*Estilos para Form*/
+header form{
+  width: 60%;
+  padding: 10px;
+  position: relative;
+  left: 20%;
+  top: 30%;
+}
+/*Estilos para input*/
+header form input{
+  width: 75%;
+  padding: 10px;
+  border:1px solid rgba(255, 255, 255, 0.49);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color:#FFF;
+}
+/*Estilos para input - placeholder*/
+header form input::placeholder{
+  color: #FFF;
+}
+/*Estilos para input-text*/
+header form input[type="submit"]{
+  width: 8%;
+  margin-left: 10px;
+}
+
+/*********************************************************************/
+/*Estilos para el main*/
+#main{
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+}
+/*Estilos categorias, colocando un scroll*/
+#main #categorias{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+/*Estilos para inputs*/
+#main #categorias input{
+  padding: 20px 40px;
+  margin: 10px ;
+  border:none;
+  cursor:pointer;
+  border-radius: 10px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgba(240, 54, 57, 0.8);
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+}
+/*Estilos para inputs*/
+#main #categorias input:hover{
+  background-color: rgba(255, 138, 0, 0.7);
+}
+/*Estilos para contenedor de peliculas-categorias*/
+#main #peliculas{
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+}
+/*Estilos para titulo de peliculas-categorias*/
+#main #peliculas #titulo-cat{
+  font-family: 'Anton', sans-serif;
+  padding: 30px;
+  letter-spacing: 8px;
+  font-size: 3em;
+  color: #FFF;
+}
+/*Estilos para contenedor de peliculas*/
+#main #peliculas #lienzo-pel{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*Estilos para peliculas*/
+#main #peliculas #lienzo-pel a{
+  width: 30%;
+  height: 250px;
+  margin: 10px;
+}
+#main #peliculas #lienzo-pel div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+  /*Estilos para imagen de pelicula*/
+#main #peliculas #lienzo-pel div img{
+  width: 100%;
+  height: 250px;
+  position: absolute;
+}
+/*Estilos para titulo de pelicula*/
+#main #peliculas #lienzo-pel div h3{
+  width: 96%;
+  height: 50px;
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+}
+/*Estilos para titulo fecha de pelicula*/
+#main #peliculas #lienzo-pel div p{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+}
+/*********************************************************************/
+/*Estilos para Pelicula-especificaciones*/
+#pelicula-esp{
+  width: 100%;
+  height: 1200px;
+  color:#d1d1d1;
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  grid-template-rows: 12% 2.5% 2.5% 21% 30% 27%;
+  }
+/*Estilos para portada de la pelicula */
+#pelicula-esp>img{
+  grid-area: 1/1/5/2;
+  width: 90%;
+  margin: 5px auto;
+}
+/*Estilos para titulo de la pelicula*/
+#pelicula-esp h2{
+  grid-area: 1/2/2/4;
+  font-size: 3em;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  color:rgb(177, 161, 11);
+}
+/*Estilos para fecha, idioma y titulo sinopsis*/
+#fecha,#idioma,#t-sinopsis{
+  width: 100%;
+  font-size: 1.1em;
+  text-align: center;
+  color: rgb(184, 92, 17);
+}
+/*Estilos para titulo sinopsis*/
+#t-sinopsis{
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+/*Estilos para sinopsis*/
+#sinopsis{
+  grid-area: 4/2/5/4;
+  width: 95%;
+}
+/**********
+Reparto */
+#reparto{
+  width: 100%;
+  height: 80%;
+  grid-area: 5/2/6/4;
+}
+
+/*Contenedor de personas del reparto*/
+#reparto-cont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/*Contenedor de persona*/
+#reparto-cont div{
+  width: 22%;
+  height: 250px;
+  margin: 4px;
+  position: relative;
+}
+/*Imagen de persona*/
+#reparto-cont div img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/*Nombre y papel de persona*/
+#reparto-cont div>p{
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0px;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/*Modificar altura del nombre del actor*/
+#reparto-cont div>p:first-of-type{
+  bottom: 47px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/**********
+Peliculas relacionadas */
+#peliRelacionadas{
+  width: 100%;
+  height: 90%;
+  grid-area: 6/1/7/4;
+}
+/*Pelicula*/
+#peliRelacionada{
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+}
+/*Contenedor de caracteristicas de peliculas*/
+#peliRelacionada a{
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+/*Imagen de pelicula*/
+#peliRelacionada a div img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/*Reparto y peliculas relacionadas Titulos (H3)*/
+#reparto> h3, #peliRelacionadas>h3{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgb(184, 92, 17);
+}
+/*********************************************************************/
+/*Estilos para busqueda*/
+#resultados-busq{
+  width: 100%;
+  height: auto;
+}
+/*Estilos para titulo de  busquedas*/
+#resultados-busq h1{
+  width: 100%;
+  font-size: 2em;
+  padding: 20px;
+  position: fixed;
+  z-index: 999;
+  top:0;
+  color:#FFF;
+  text-align: center;
+  background-color:rgba(177, 161, 11, 0.8);
+}
+/*Estilos para contenedor de peliculas encontradas en busqueda*/
+#resultadosBP{
+  width: 100%;
+  height: auto;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+/*Estilos para pelicula encontrada */
+#resultadosBP a{
+  width: 30%;
+  height: 250px;
+  margin: 5px;
+}
+#resultadosBP div{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*Estilos para imagen de pelicula*/
+#resultadosBP div img{
+  width: 100%;
+  height: 100%;
+}
+/*Estilos para nombre de pelicula*/
+#resultadosBP div p{
+  width: 90%;
+  text-align: center;
+  padding: 5%;
+  position: absolute;
+  bottom: 0;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
 }
 
-.App-link {
-  color: #61dafb;
+/*********************************************************************/
+/*Estilos para el Footer*/
+footer{
+  width: 100%;
+  height: 400px;
+  background-position: top;
+  background-attachment: fixed;
+  position: relative;
+  top: 100px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Estilos para creditos*/
+footer p{
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  height: 10px;
+  padding: 5%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color:#FFF;
 }

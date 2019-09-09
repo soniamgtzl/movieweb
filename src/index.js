@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//Estilos
 import './index.css';
+
 import App from './App';
+//Si se rompe la conexion esto guarda de manera local
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
